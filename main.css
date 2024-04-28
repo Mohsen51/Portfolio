@@ -28,32 +28,21 @@ p {
 
   .menu::before {
     display: inline;
+    position: absolute;
+    top: 5px;
+    left: 10px;
   }
 }
 
-nav ul li {
-  display: inline-block;
-  margin-right: 20px;
-  text-align: left; /* This will align the links to the left */
+ul {
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a {
+a {
   color: #ddd;
   text-decoration: none;
-}
-
-.nav-active ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.nav-active ul li {
-  margin-bottom: 20px;
-}
-
-#scroll-arrow {
-  cursor: pointer;
 }
 
 nav {
@@ -69,10 +58,79 @@ nav {
   margin-bottom: 50px;
 }
 
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  text-align: left; /* This will align the links to the left */
+}
+
+.blog ul li a {
+  font-weight: bold;
+  font-size: 20px;
+  color: green;
+}
+
 nav ul li:first-child a {
   font-weight: bold;
   font-size: 20px;
   color: green;
+}
+
+.nav-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-active ul {
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nav-active ul li {
+  margin-bottom: 20px;
+}
+
+.nav-active ul li:first-child a {
+  display: none;
+}
+
+#scroll-arrow {
+  cursor: pointer;
+}
+
+.blog ul {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.blog ul li {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tech-item {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tech-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-right: 1px solid #000;
+  padding-right: 10px;
+}
+
+.tech-item p {
+  padding-left: 10px;
+  min-width: 200px;
 }
 
 .header {
