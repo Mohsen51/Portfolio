@@ -1,0 +1,2 @@
+npx prettier . --check
+echo "GG for the commit ! 🥳"
